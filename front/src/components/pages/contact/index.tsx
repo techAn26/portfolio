@@ -41,7 +41,7 @@ export const Contact = () => {
 const styles = {
   container: css`
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     padding: 20px;
   `,
   form: css`
