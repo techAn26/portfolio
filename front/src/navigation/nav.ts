@@ -7,6 +7,7 @@ type Nav = {
     path: string
     bg?: string
     layer: number
+    hideContents?: boolean
   }
 }
 
@@ -42,6 +43,7 @@ export const nav: Nav = {
     description: 'skill',
     path: '/skill/',
     layer: 1,
+    hideContents: false,
   },
   '/contact/': {
     title: 'Contact',

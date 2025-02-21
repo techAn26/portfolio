@@ -8,13 +8,14 @@ import { useTemplate } from './hook/useTemplate'
 
 export const Template = ({ children }: { children: React.ReactNode }) => {
   const { path } = useTemplate()
+  const navContents = nav[path]
 
   return (
     <div css={styles.container({ path })}>
       <div css={styles.frame}>
         <Header currentPath={path} />
         <div css={styles.main}>
-          <Title title={nav[path].title} description={nav[path].description} />
+          {!navContents.hideContents && <Title title={navContents.title} description={navContents.description} />}
           <div css={styles.content}>{children}</div>
         </div>
         <Footer css={styles.footer} />
